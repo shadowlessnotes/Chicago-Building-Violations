@@ -8,9 +8,10 @@ There are 3 endpoints for this Chicago Building Violations API.
 The sample server address is http://127.0.0.1:8000/
 <br>Replace http://127.0.0.1:8000/ with your server domain.
 
-### Endpoints ###
-<b>GET</b>
-<br>http://127.0.0.1:8000/property/{address}/
+## Endpoints ##
+
+### GET: Violations by Address ###
+http://127.0.0.1:8000/property/{address}/
 <br>
 <br> Retrieve the violations of a single address. And whether there are any scofflaws for this address.
 
@@ -75,8 +76,8 @@ The response will return a json with:
 }
 ```
 
-<b>GET</b>
-<br>http://127.0.0.1:8000/property/scofflaws/violations
+### GET: Scofflaw Addresses since Violation Date ###
+http://127.0.0.1:8000/property/scofflaws/violations
 <br>
 <br> Retrieve a list of scofflaw addresses. Filter for address with violations since date with the optional parameter 'since='. Otherwise all scofflaw addresses are returned
 
@@ -106,8 +107,8 @@ The response will return a json with:
 ]
 ```
 
-<b>POST</b>
-<br>http://127.0.0.1:8000/property/{address}/comments/
+### POST: Comment for Address ###
+http://127.0.0.1:8000/property/{address}/comments/
 <br>
 <br> Add comment to address.
 <br>Post to this comments endpoint of the property address with a json body that includes 'author' and 'comment' keys. Both 'author' and 'comment' are required.
