@@ -134,5 +134,3 @@ curl -X POST "http://127.0.0.1:8000/property/6117%20S%20RACINE%20AVE/comments/" 
     ]
 }
 ```
-
-### Status and error codes
