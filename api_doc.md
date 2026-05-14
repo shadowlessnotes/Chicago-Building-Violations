@@ -9,7 +9,7 @@ The sample server address is http://127.0.0.1:8000/
 
 ### Endpoints ###
 <b>GET</b>
-<br>http://127.0.0.1:8000/property/\<address\>/
+<br>http://127.0.0.1:8000/property/{address}/
 <br>
 <br> Retrieve the violations of a single address. And whether there are any scofflaws for this address. Replace {host} with your server domain.
 
@@ -110,7 +110,7 @@ The response will return a json with:
 ```
 
 <b>POST</b>
-<br>http://127.0.0.1:8000/property/\<address\>/comments/
+<br>http://127.0.0.1:8000/property/{address}/comments/
 <br>
 <br> Add comment to address.
 <br>Post to this comments endpoint of the property address with a json body that includes 'author' and 'comment' keys. Both author and comment are required.
