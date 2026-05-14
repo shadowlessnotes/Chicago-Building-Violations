@@ -6,7 +6,7 @@ There are 3 endpoints for this Chicago Building Violations API.
 - POST comment for address
 
 The sample server address is http://127.0.0.1:8000/
-Replace http://127.0.0.1:8000/ with your server domain.
+<br>Replace http://127.0.0.1:8000/ with your server domain.
 
 ### Endpoints ###
 <b>GET</b>
