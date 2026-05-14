@@ -60,6 +60,7 @@ def query_data_singlevalue(query, value):
 
 
 #GET REQUEST get violations by address
+#queries the violation address with an aggregate join from the scofflaw table counting the number of scofflaws for that address
 @api_view(['GET'])
 def get_data(request, address):
     decoded_address = urllib.parse.unquote(address).strip().upper()
@@ -80,6 +81,9 @@ def get_data(request, address):
 
 
 #GET scofflaw violations
+#returns list of scofflaw address with violations
+#returns all scofflaw addresses if no since=<yyyy-mm-dd> is provided
+#returns scofflaw addresses with violations >= since date
 @api_view(['GET'])
 def get_scofflaw_violations(request):
     since = request.query_params.get('since', '').strip()
