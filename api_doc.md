@@ -6,12 +6,13 @@ There are 3 endpoints for this Chicago Building Violations API.
 - POST comment for address
 
 The sample server address is http://127.0.0.1:8000/
+Replace http://127.0.0.1:8000/ with your server domain.
 
 ### Endpoints ###
 <b>GET</b>
 <br>http://127.0.0.1:8000/property/{address}/
 <br>
-<br> Retrieve the violations of a single address. And whether there are any scofflaws for this address. Replace {host} with your server domain.
+<br> Retrieve the violations of a single address. And whether there are any scofflaws for this address.
 
 The response will return a json with:
 - last_violation_date (date)
@@ -38,8 +39,7 @@ The response will return a json with:
             "violation_description": "ARRANGE FOR REINSPECTION REGAR",
             "violation_inspector_comments": "INTERIOR OF BUILDING , NO ENTRY NO RESPONSE . UNABLE TO VERIFY SMOKE OR CARBON MONOXIDE ALARMS.",
             "address": "6117 S RACINE AVE",
-            "scofflaw_record_id": "14-M1-402101-2021-09-01",
-            "scofflaw_defendant_owner": "WESLEY REALTY GROUP, INCORPORATED"
+            "scofflaw_count": 1
         },
         {
             "id": "7116435",
@@ -49,8 +49,7 @@ The response will return a json with:
             "violation_description": "REMV OBSTR FROM DRAINAGE SYSTM",
             "violation_inspector_comments": "NaN",
             "address": "6117 S RACINE AVE",
-            "scofflaw_record_id": "14-M1-402101-2021-09-01",
-            "scofflaw_defendant_owner": "WESLEY REALTY GROUP, INCORPORATED"
+            "scofflaw_count": 1
         },
         {
             "id": "7116436",
@@ -60,8 +59,7 @@ The response will return a json with:
             "violation_description": "FLAKY INTERIOR PAINT",
             "violation_inspector_comments": "NaN",
             "address": "6117 S RACINE AVE",
-            "scofflaw_record_id": "14-M1-402101-2021-09-01",
-            "scofflaw_defendant_owner": "WESLEY REALTY GROUP, INCORPORATED"
+            "scofflaw_count": 1
         },
         {
             "id": "7116437",
@@ -71,8 +69,7 @@ The response will return a json with:
             "violation_description": "ARRANGE PREMISE INSPECTION",
             "violation_inspector_comments": "ARRANGE FOR INSPECTION AFTER REPAIRS - (312) 743-0413",
             "address": "6117 S RACINE AVE",
-            "scofflaw_record_id": "14-M1-402101-2021-09-01",
-            "scofflaw_defendant_owner": "WESLEY REALTY GROUP, INCORPORATED"
+            "scofflaw_count": 1
         }
     ]
 }
@@ -113,7 +110,7 @@ The response will return a json with:
 <br>http://127.0.0.1:8000/property/{address}/comments/
 <br>
 <br> Add comment to address.
-<br>Post to this comments endpoint of the property address with a json body that includes 'author' and 'comment' keys. Both author and comment are required.
+<br>Post to this comments endpoint of the property address with a json body that includes 'author' and 'comment' keys. Both 'author' and 'comment' are required.
 
 Example POST Request:
 ```bash
